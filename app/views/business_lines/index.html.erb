@@ -1,0 +1,37 @@
+<h1>Listing business_lines</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Monthly revenue</th>
+    <th>Margin</th>
+    <th>Valuation</th>
+    <th>Position in business</th>
+    <th>Full time workers</th>
+    <th>Monthly Gross Revenue</th>
+    <th>Revenue months</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @business_lines.each do |business_line| %>
+  <tr>
+    <td><%= business_line.name %></td>
+    <td><%= business_line.monthly_revenue %></td>
+    <td><%= business_line.margin %></td>
+    <td><%= business_line.valuation %></td>
+    <td><%= business_line.position_in_business %></td>
+    <td><%= business_line.full_time_workers %></td>
+    <td><%= business_line.monthly_gross_revenue %></td>
+    <td><%= business_line.revenue_months %></td>
+    <td><%= link_to 'Show', business_line %></td>
+    <td><%= link_to 'Edit', edit_business_line_path(business_line) %></td>
+    <td><%= link_to 'Destroy', business_line, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Business line', new_business_line_path %>

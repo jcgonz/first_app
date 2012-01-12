@@ -1,0 +1,45 @@
+<%= form_for(@business_line) do |f| %>
+  <% if @business_line.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@business_line.errors.count, "error") %> prohibited this business_line from being saved:</h2>
+
+      <ul>
+      <% @business_line.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :monthly_revenue %><br />
+    <%= f.text_field :monthly_revenue %>
+  </div>
+  <div class="field">
+    <%= f.label :margin %><br />
+    <%= f.text_field :margin %>
+  </div>
+  <div class="field">
+    <%= f.label :valuation %><br />
+    <%= f.text_field :valuation %>
+  </div>
+  <div class="field">
+    <%= f.label :position_in_business %><br />
+    <%= f.text_field :position_in_business %>
+  </div>
+  <div class="field">
+    <%= f.label :full_time_workers %><br />
+    <%= f.text_field :full_time_workers %>
+  </div>
+  <div class="field">
+    <%= f.label :revenue_months %><br />
+    <%= f.text_field :revenue_months %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

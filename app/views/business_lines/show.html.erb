@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @business_line.name %>
+</p>
+
+<p>
+  <b>Monthly revenue:</b>
+  <%= @business_line.monthly_revenue %>
+</p>
+
+<p>
+  <b>Margin:</b>
+  <%= @business_line.margin %>
+</p>
+
+<p>
+  <b>Valuation:</b>
+  <%= @business_line.valuation %>
+</p>
+
+<p>
+  <b>Position in business:</b>
+  <%= @business_line.position_in_business %>
+</p>
+
+<p>
+  <b>Full time workers:</b>
+  <%= @business_line.full_time_workers %>
+</p>
+
+<p>
+  <b>Revenue months:</b>
+  <%= @business_line.revenue_months %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_line_path(@business_line) %> |
+<%= link_to 'Back', business_lines_path %>

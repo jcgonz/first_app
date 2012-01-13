@@ -1,8 +1,5 @@
 require 'spec_helper'
 
-# Specs in this file have access to a helper object that includes
-# the BusinessLinesHelper. For example:
-#
 # describe BusinessLinesHelper do
 #   describe "string concat" do
 #     it "concats two strings with spaces" do
@@ -10,6 +7,7 @@ require 'spec_helper'
 #     end
 #   end
 # end
+
 describe BusinessLinesHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
 end

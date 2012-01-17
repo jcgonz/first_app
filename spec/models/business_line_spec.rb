@@ -3,9 +3,7 @@ require 'spec_helper'
 describe BusinessLine do
   describe 'monthly_gross_revenue' do
     it "calculates with good values" do
-      b = BusinessLine.new
-      b.margin = 0.50
-      b.monthly_revenue = 10_000
+      b = Factory.build :business_line, margin: 0.50, monthly_revenue: 10_000
       b.monthly_gross_revenue.should == 5_000
 
       c = BusinessLine.new(margin: 0.40, monthly_revenue: 4_000)

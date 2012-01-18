@@ -1,5 +1,9 @@
 FirstApp::Application.routes.draw do
-  root :to => 'business_lines#index'
+
+  root :to => 'dashboards#index'
 
   resources :business_lines
+  resources :expenses
+
+  # match '/dashboards' => 'dashboards#index'
 end

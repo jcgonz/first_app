@@ -1,0 +1,30 @@
+FOO HAT
+
+<b> HI </b>
+
+<div class='business-lines'>
+Lines:
+<ul>
+<%- @business_lines.each do |line| %>
+  <li>
+  <%= line.name %>
+  <%= line.monthly_gross_profit %>
+  </li>
+</ul>
+
+<%- end %>
+</div>
+
+<div class='expenses'>
+Expenses:
+<%- @expenses_to_show.each do |exp| %>
+
+<ul>
+  <li>
+    <%= exp.name %>
+    <%= exp.amount %>
+  </li>
+</ul>
+<% end %>
+
+</div>

@@ -1,6 +1,6 @@
 class BusinessLine < ActiveRecord::Base
 
-  def monthly_gross_revenue
+  def monthly_gross_profit
     if ( margin.present? && monthly_revenue.present? ) 
       margin * monthly_revenue
     else
@@ -14,6 +14,10 @@ class BusinessLine < ActiveRecord::Base
     else
       0
     end
+  end
+
+  def present_value_of_profit_stream(discount_rate)
+    0
   end
 
 end
